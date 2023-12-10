@@ -3,6 +3,7 @@ name: RBS collection
 on:
   schedule:
     - cron: '00 8 * * MON'
+  workflow_dispatch:
 
 permissions:
   contents: write
