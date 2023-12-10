@@ -1,0 +1,21 @@
+module RbsConfig
+  module Config
+    def self.generate: (files: Array[Pathname], ?class_name: String) -> String
+
+    class Generator
+      attr_reader class_name: String
+      attr_reader files: Array[Pathname]
+
+      def initialize: (class_name: String, files: Array[Pathname]) -> void
+      def generate: () -> String
+
+      private
+
+      def format: (String rbs) -> String
+      def generate_classes: (Hash[untyped, untyped] config) -> Array[String]
+      def generate_methods: (Hash[untyped, untyped] config) -> Array[String]
+      def stringify_type: (untyped type, untyped value) -> String
+      def load_config: (Array[Pathname] files) -> Hash[untyped, untyped]
+    end
+  end
+end
