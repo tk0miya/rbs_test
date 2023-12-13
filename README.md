@@ -1,4 +1,4 @@
-# rbs_config
+# rbs_test
 
 rbs_config is a RBS generator for Rails configuration.
 
